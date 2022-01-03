@@ -1,0 +1,420 @@
+
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai');
+
+@-webkit-keyframes eyes {
+    100% {
+        top: 0;
+        right: 0;
+    }
+}
+@keyframes eyes {
+    100% {
+        top: 0;
+        right: 0;
+    }
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #58646b;
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Arima Madurai', cursive;
+}
+.cheburashka-wrapper {
+    position: relative;
+    margin: 8% auto;
+    max-width: 250px;
+}
+.action-feed {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    border: black;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+.action-play {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    border: black;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+.output {
+    font-size: 2rem;
+}
+
+/* CHEBURASHKA's HAT */
+
+.cheburashka-hat {
+    position: absolute;
+    top: -26.5%;
+    z-index: 2;
+    left: 35%;
+    width: 0;
+    height: 0;
+    border-left: 31px solid transparent;
+    border-right: 31px solid transparent;
+    border-bottom: 46px solid #da251c;
+    border-radius: 50%;
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+}
+/*  BALLOON*/
+
+.balloon {
+    position: absolute;
+    width: 32%;
+    top: -90%;
+    right: 15%;
+    height: 80%;
+    background: #12a5d6;
+    border-radius: 70% 70% 65% 65%;
+    z-index: 3;
+    box-shadow: inset -5px 6px 16px #065e7b;
+    -webkit-animation: balloon-fly 4s 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+            animation: balloon-fly 4s 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.balloon:before {
+    content: "";
+    position: absolute;
+    bottom: -11%;
+    width: 18%;
+    height: 13%;
+    background: #12a5d6;
+    left: 41%;
+    border-radius: 0% 0% 0% 100%;
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+}
+.balloon:after {
+    content: "";
+    position: absolute;
+    bottom: -193%;
+    width: 17%;
+    height: 187%;
+    left: 23%;
+    border-radius: 50% 25% 54% 20%;
+    border: 1px solid grey;
+    border-left: 0;
+    -webkit-transform: rotate(6deg);
+            transform: rotate(6deg);
+}
+
+ .balloon-text {
+    position: absolute;
+    transform: rotate(-63deg);
+    top: 35%;
+    left: 25%;
+    font-family: 'Arima Madurai', cursive;
+    font-size: 20px;
+    color: wheat;
+    text-shadow: 1px 1px #096e8f;
+  }
+
+/* CHEBURASHKA's HEAD */
+
+.cheburashka-head {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 52%;
+    height: auto;
+    padding-bottom: 45%;
+    background: #4f2723;
+    border-radius: 50%;
+    border-bottom: 0;
+    border: 2px solid #3f180c;
+}
+.cheburashka-face {
+    position: absolute;
+    background: #d26e32;
+    width: 70%;
+    height: 67%;
+    border-radius: 30% 30% 50% 50%;
+    left: 6%;
+    top: 22%;
+    border: 2px solid #3f180c;
+}
+.cheburashka-ear-left,
+.cheburashka-ear-right {
+    position: absolute;
+    background: #4f2723;
+    border-radius: 50%;
+    border: 2px solid #3f180c;
+    width: 38%;
+    height: 100%;
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+}
+.cheburashka-ear-left {
+    left: 3%;
+}
+.cheburashka-ear-right {
+    right: -3%;
+    z-index: 2;
+    border-left: none;
+}
+.cheburashka-ear-left-inner,
+.cheburashka-ear-right-inner {
+    background: #d26e32;
+    width: 61%;
+    height: 61%;
+    border-radius: 50% 70% 50% 40%;
+    left: 19%;
+    position: absolute;
+    top: 17%;
+    border: 1px solid #270e06;
+}
+.cheburashka-eye-left,
+.cheburashka-eye-right {
+    position: absolute;
+    top: 22%;
+    width: 29%;
+    height: 35%;
+    background: white;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.cheburashka-eye-left {
+    left: 5%;
+}
+.cheburashka-eye-right {
+    right: 16%;
+}
+.cheburashka-eye-left:before,
+.cheburashka-eye-right:before {
+    content: "";
+    position: absolute;
+    top: -57%;
+    width: 60%;
+    height: 22%;
+    background: #a33615;
+    border: 1px solid black;
+    border-radius: 10px 10px 2px 2px;
+}
+.cheburashka-eye-left:before {
+    left: 20%;
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+}
+.cheburashka-eye-right:before {
+    right: -5%;
+    -webkit-transform: rotate(37deg);
+            transform: rotate(37deg);
+}
+.cheburashka-eye-left-inner,
+.cheburashka-eye-right-inner {
+    position: absolute;
+    right: 20%;
+    top: 12%;
+    width: 80%;
+    height: 80%;
+    background: black;
+    border-radius: 50%;
+    -webkit-animation: eyes 1s 1s forwards;
+            animation: eyes 1s 1s forwards;
+}
+.cheburashka-eye-left-inner:before,
+.cheburashka-eye-right-inner:before {
+    content: "";
+    position: absolute;
+    left: 15%;
+    top: 12%;
+    width: 25%;
+    height: 30%;
+    background: white;
+    border-radius: 50%;
+}
+.cheburashka-eye-left-inner:after,
+.cheburashka-eye-right-inner:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    top: 45%;
+    width: 12%;
+    height: 12%;
+    background: white;
+    border-radius: 50%;
+}
+.cheburashka-nose {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 12%;
+    height: 12%;
+    border-right: 4px solid #2b0901;
+    border-top: 4px solid #2b0901;
+    border-radius: 50% 5% 50% 100%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.cheburashka-mouth {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 25%;
+    height: 38%;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-bottom-color: #980c0c;
+}
+.cheburashka-body {
+    position: absolute;
+    top: 86%;
+    height: 100%;
+    width: 30%;
+    background: #4f2723;
+    z-index: -1;
+    left: 35%;
+    border-radius: 50% 50% 30% 30%;
+    border: 2px solid #3f180c;
+}
+.cheburashka-body-inner {
+    position: absolute;
+    top: 0;
+    height: 40%;
+    width: 60%;
+    background: #d26e32;
+    z-index: -1;
+    right: 12%;
+    border-radius: 50%;
+    border: 2px solid #3f180c;
+    -webkit-transform: skewX(10deg);
+            transform: skewX(10deg);
+}
+.cheburashka-left-foot,
+.cheburashka-right-foot {
+    position: absolute;
+    top: 98%;
+    width: 65%;
+    height: 23%;
+    background: #4f2723;
+    border: 1px solid #270e06;
+    border-radius: 25px 25px 5px 5px;
+}
+.cheburashka-left-foot {
+    left: -15%;
+}
+.cheburashka-right-foot {
+    right: -15%;
+}
+.cheburashka-left-arm,
+.cheburashka-right-arm {
+    position: absolute;
+    width: 35%;
+    height: 60%;
+    background: #4f2723;
+    border: 2px solid #270e06;
+    border-radius: 50%;
+    border-bottom: 0;
+    border-right-width: 1px;
+}
+.cheburashka-left-arm {
+    -webkit-transform: rotate(19deg);
+            transform: rotate(19deg);
+    left: -5%;
+}
+.cheburashka-right-arm {
+    right: -18%;
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+    top: 2%;
+    border-left-width: 1px;
+    width: 25%;
+}
+.cheburashka-left-arm:after {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: 25%;
+    width: 172%;
+    height: 40%;
+    background: #4f2723;
+    border: 1px solid #270e06;
+    border-radius: 50%;
+    border-left: 0;
+}
+.cheburashka-right-arm:after {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    right: 25%;
+    width: 172%;
+    height: 40%;
+    background: #4f2723;
+    border: 1px solid #3f180c;
+    border-radius: 50%;
+    border-right: 0;
+}
+.cheburashka-left-arm-paws,
+.cheburashka-right-arm-paws {
+    position: absolute;
+    width: 42%;
+    height: 11%;
+    border: 2px solid #230d06;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 3px;
+}
+.cheburashka-left-arm-paws {
+    top: 80%;
+    -webkit-transform: rotate(-32deg);
+            transform: rotate(-32deg);
+    left: 182%;
+}
+.cheburashka-right-arm-paws {
+    top: 80%;
+    -webkit-transform: rotate(32deg);
+            transform: rotate(32deg);
+    right: 182%;
+}
+.cheburashka-left-arm-paws:before,
+.cheburashka-right-arm-paws:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #230d06;
+    top: -400%;
+    border-left: 0;
+    border-right: 0;
+}
+.cheburashka-tie-left,
+.cheburashka-tie-right {
+    position: absolute;
+    width: 35%;
+    height: 50%;
+    border: 2px solid #3f180c;
+    background-color: #da251c;
+    z-index: 2;
+    top: 10%;
+}
+.cheburashka-tie-left {
+    left: 15%;
+    border-radius: 50% 0% 100% 10%;
+}
+.cheburashka-tie-right {
+    right: 15%;
+    border-radius: 0% 50% 10% 100%;
+}
+.cheburashka-tie-left:before {
+    content: "";
+    position: absolute;
+    border-radius: 35%;
+    width: 60%;
+    height: 24%;
+    background: #da251c;
+    border: 1px solid #40190e;
+    left: 65%;
+}
